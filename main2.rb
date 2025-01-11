@@ -40,13 +40,8 @@ input = gets.chomp.to_i
     end
 end
 
-qa1 = {
-    title: "「今回のスクーリングが始まった日は？」",
-    a1: "1.2024/1/11",
-    a2: "2.2025/1/11",
-    a3: "3.2025/7/10",
-    num: 2
-}
+require 'json'
+qa1 = JSON[File.read('qa1.json'), symbolize_names: true]
 qa(qa1)
 
 qa2 = {
